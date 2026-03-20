@@ -207,6 +207,9 @@ DC4/sources/Extragalactic/4C71p07 <br />
 DC4/sources/Extragalactic/3C454p3_low <br />
 DC4/sources/Extragalactic/3C454p3_high <br />
 DC4/sources/Extragalactic/CenA <br />
+DC4/sources/DarkMatter/Annihilation_eeg_NFW <br />
+DC4/sources/DarkMatter/Decay_gg_NFW <br />
+DC4/sources/DarkMatter/Decay_mass400 <br />
 
 ## Galactic Diffuse (Galdiff) <br />
 Galdiff/GalIC <br />
