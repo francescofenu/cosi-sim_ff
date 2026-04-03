@@ -10,7 +10,7 @@ Pipebody.RangeCut 1.
 
 DataChallenge.Source DM
 DM.ParticleType 1
-DM.Beam FarFieldNormalizedEnergyBeamFluxFunction Decay_gg_NFW.source
+DM.Beam FarFieldNormalizedEnergyBeamFluxFunction Decay_gg_NFW.dat
 DM.Spectrum NormalizedEnergyBeamFluxFunction
 DM.Orientation Galactic Fixed 90 180
 DM.EarthOccultation false
