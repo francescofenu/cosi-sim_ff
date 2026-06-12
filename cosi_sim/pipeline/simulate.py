@@ -91,7 +91,7 @@ class Simulate:
         # Make output data directory:
         #if os.path.isdir(directorySave+"Output") == True: # francesco
         #    shutil.rmtree(directorySave+"Output")
-        os.system("mkdir "+directorySave+"Output")
+        #os.system("mkdir "+directorySave+"Output")
         
         # Copy orientation file if running parallel jobs:
         if os.path.exists("GalacticScan.ori"):
@@ -163,7 +163,7 @@ class Simulate:
         print()
  
         # Change to output directory:
-        os.chdir(directorySave+"Output")
+        os.chdir(directorySave) #+"Output")
    
         # Construct executable:
         # Option to run cosima or mcosima with numerous cores.
@@ -516,7 +516,7 @@ class Simulate:
             self.geo_file = geo_file
         
         # Change to output directory:
-        os.chdir(directorySave+"Output")
+        os.chdir(directorySave) #+"Output")
  
         # Default mode:
         if self.mcosima == False:
@@ -707,7 +707,7 @@ class Simulate:
             self.geo_file = geo_file
 
         # Change to output directory:
-        os.chdir(directorySave+"Output")
+        os.chdir(directorySave) #+"Output")
    
         if tra_input == "default":
         
