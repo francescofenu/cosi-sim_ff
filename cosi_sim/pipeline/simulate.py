@@ -62,7 +62,7 @@ class Simulate:
         self.include_transmission_prob = inputs["include_transmission_prob"]
         self.transmission_prob_file = inputs["transmission_prob_file"]
 
-    def define_sim(self, external_src=False):
+    def define_sim(self, directorySave, external_src=False):
 
         """
         This function makes the main source file for the simulation. 
@@ -89,10 +89,10 @@ class Simulate:
         print()
 
         # Make output data directory:
-        if os.path.isdir("Output") == True:
-            shutil.rmtree("Output")
-        os.system("mkdir Output")
-        os.system("pwd") #Francesco
+        if os.path.isdir(directorySave+"Output") == True:
+            shutil.rmtree(directorySave+"Output")
+        os.system("mkdir "+directorySave+"Output")
+        
         # Copy orientation file if running parallel jobs:
         if os.path.exists("GalacticScan.ori"):
             os.system("scp GalacticScan.ori Output")
@@ -114,7 +114,7 @@ class Simulate:
         if external_src == False:
            
             # Write source file:
-            f = open(os.path.join("Output",self.source_file),"w")
+            f = open(os.path.join(directorySave+"Output",self.source_file),"w")
             f.write("#Source file for data challenge\n")
             f.write("#The detector rotates in the Galactic coordiante system as given in the ori file.\n")
             f.write("#The point sources are fixed in Galactic coordinates.\n\n")
