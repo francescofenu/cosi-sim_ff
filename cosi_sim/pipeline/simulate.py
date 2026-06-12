@@ -226,7 +226,8 @@ class Simulate:
 
         # Inputs:
         this_file = filename
-        new_file = filename+"fixed_times.inc1.id1.sim"
+        nameFirstpart = filename.split(".")[0]
+        new_file = nameFirstpart+"_fixed_times.inc1.id1.sim"
 
         # Open new file for writing:
         g = open(new_file,"w")
