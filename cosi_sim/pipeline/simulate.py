@@ -92,7 +92,7 @@ class Simulate:
         if os.path.isdir("Output") == True:
             shutil.rmtree("Output")
         os.system("mkdir Output")
-
+        os.system("pwd") #Francesco
         # Copy orientation file if running parallel jobs:
         if os.path.exists("GalacticScan.ori"):
             os.system("scp GalacticScan.ori Output")
