@@ -143,7 +143,7 @@ class Simulate:
     
         return
     
-    def run_cosima(self, seed="none", verbosity=0, output_name="cosima",directorySave):
+    def run_cosima(self, seed="none", verbosity=0, output_name="cosima",directorySave="zero"):
         
         """
         input definitions:
