@@ -62,7 +62,7 @@ class Simulate:
         self.include_transmission_prob = inputs["include_transmission_prob"]
         self.transmission_prob_file = inputs["transmission_prob_file"]
 
-    def define_sim(self, directorySave, external_src=False):
+    def define_sim(self, directorySave="zero", external_src=False):
 
         """
         This function makes the main source file for the simulation. 
