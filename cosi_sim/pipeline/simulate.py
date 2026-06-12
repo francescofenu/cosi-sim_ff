@@ -495,7 +495,7 @@ class Simulate:
 
         return
 
-    def run_revan(self, geo_file="default", output_name="revan_terminal_output"):
+    def run_revan(self, geo_file="default", output_name="revan_terminal_output",directorySave="zero"):
         
         """
         optional inputs:
@@ -515,7 +515,7 @@ class Simulate:
             self.geo_file = geo_file
         
         # Change to output directory:
-        os.chdir("Output")
+        os.chdir(directorySave+"Output")
  
         # Default mode:
         if self.mcosima == False:
@@ -671,7 +671,7 @@ class Simulate:
         return
 
     def run_mimrec(self, extract_root=False, geo_file="default", tra_input="default", energy=None,
-            extract_events=True, make_spectrum=True, make_image=True, make_LC=True):
+            extract_events=True, make_spectrum=True, make_image=True, make_LC=True,directorySave="zero"):
         
         """
         input definitions:
@@ -706,7 +706,7 @@ class Simulate:
             self.geo_file = geo_file
 
         # Change to output directory:
-        os.chdir("Output")
+        os.chdir(directorySave+"Output")
    
         if tra_input == "default":
         
