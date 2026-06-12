@@ -143,7 +143,7 @@ class Simulate:
     
         return
     
-    def run_cosima(self, seed="none", verbosity=0, output_name="cosima"):
+    def run_cosima(self, seed="none", verbosity=0, output_name="cosima",directorySave):
         
         """
         input definitions:
@@ -162,7 +162,7 @@ class Simulate:
         print()
  
         # Change to output directory:
-        os.chdir("Output")
+        os.chdir(directorySave+"Output")
    
         # Construct executable:
         # Option to run cosima or mcosima with numerous cores.
