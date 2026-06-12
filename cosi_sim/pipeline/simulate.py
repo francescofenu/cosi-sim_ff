@@ -89,7 +89,7 @@ class Simulate:
         print()
 
         # Make output data directory:
-        #if os.path.isdir(directorySave+"Output") == True:
+        #if os.path.isdir(directorySave+"Output") == True: # francesco
         #    shutil.rmtree(directorySave+"Output")
         os.system("mkdir "+directorySave+"Output")
         
@@ -114,7 +114,8 @@ class Simulate:
         if external_src == False:
            
             # Write source file:
-            f = open(os.path.join(directorySave+"Output",self.source_file),"w")
+            #f = open(os.path.join(directorySave+"Output",self.source_file),"w")
+            f = open(self.source_file,"w")
             f.write("#Source file for data challenge\n")
             f.write("#The detector rotates in the Galactic coordiante system as given in the ori file.\n")
             f.write("#The point sources are fixed in Galactic coordinates.\n\n")
