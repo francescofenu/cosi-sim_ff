@@ -225,8 +225,8 @@ class Simulate:
         """
 
         # Inputs:
-        this_file = "Output/" + filename
-        new_file = "Output/fixed_times.inc1.id1.sim"
+        this_file = filename
+        new_file = filename+"fixed_times.inc1.id1.sim"
 
         # Open new file for writing:
         g = open(new_file,"w")
