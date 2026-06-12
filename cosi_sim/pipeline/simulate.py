@@ -89,8 +89,8 @@ class Simulate:
         print()
 
         # Make output data directory:
-        if os.path.isdir(directorySave+"Output") == True:
-            shutil.rmtree(directorySave+"Output")
+        #if os.path.isdir(directorySave+"Output") == True:
+        #    shutil.rmtree(directorySave+"Output")
         os.system("mkdir "+directorySave+"Output")
         
         # Copy orientation file if running parallel jobs:
