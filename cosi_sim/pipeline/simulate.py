@@ -27,9 +27,6 @@ class Simulate:
     
     def __init__(self,input_yaml):
 
-        # Get home directory:
-        #self.home = os.getcwd()
-        self.home = "/home/fenu/SimulationGRB/cosi-sim_ff/run1/"
         # Get install directory:
         self.sim_dir = os.path.split(cosi_sim.__file__)[0]
 
@@ -38,6 +35,7 @@ class Simulate:
             inputs = yaml.load(file,Loader=yaml.FullLoader)
 
         self.run_dir = inputs["run_dir"]
+        self.home = self.run_dir
         self.geo_file = inputs["geometry_file"]
         self.name = inputs["name"]
         self.source_file = "/home/fenu/SimulationGRB/cosi-sim_ff/run1/bn110605183_new.source"  #self.name + ".source"
@@ -162,8 +160,7 @@ class Simulate:
         print()
  
         # Change to output directory:
-        #os.chdir("Output")
-        os.chdir("/home/fenu/SimulationGRB/cosi-sim_ff/run1/")
+        os.chdir(self.home)
 
         # Construct executable:
         # Option to run cosima or mcosima with numerous cores.
@@ -195,9 +192,6 @@ class Simulate:
         if self.mcosima == True:
             self.msimconcatter()
         
-        # Return home:
-        os.chdir(self.home)
-
         return
 
     def get_time_constant(self, ori_file):
@@ -516,8 +510,7 @@ class Simulate:
             self.geo_file = geo_file
         
         # Change to output directory:
-        #os.chdir("Output")
-        os.chdir("/home/fenu/SimulationGRB/cosi-sim_ff/run1/")
+        os.chdir(self.home)
  
         # Default mode:
         if self.mcosima == False:
@@ -708,8 +701,7 @@ class Simulate:
             self.geo_file = geo_file
 
         # Change to output directory:
-        #os.chdir("Output")
-        os.chdir("/home/fenu/SimulationGRB/cosi-sim_ff/run1/")
+        os.chdir(self.home)
 
         if tra_input == "default":
         
