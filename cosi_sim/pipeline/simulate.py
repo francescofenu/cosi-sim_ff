@@ -28,8 +28,8 @@ class Simulate:
     def __init__(self,input_yaml):
 
         # Get home directory:
-        self.home = os.getcwd()
-        
+        #self.home = os.getcwd()
+        self.home = "/home/fenu/SimulationGRB/cosi-sim_ff/run1/"
         # Get install directory:
         self.sim_dir = os.path.split(cosi_sim.__file__)[0]
 
@@ -40,7 +40,7 @@ class Simulate:
         self.run_dir = inputs["run_dir"]
         self.geo_file = inputs["geometry_file"]
         self.name = inputs["name"]
-        self.source_file = self.name + ".source"
+        self.source_file = "/home/fenu/SimulationGRB/cosi-sim_ff/run1/bn110605183_2.source"  #self.name + ".source"
         self.time = inputs["time"]
         self.src_list = inputs["src_list"]
         self.orientation_file = inputs["orientation_file"]
