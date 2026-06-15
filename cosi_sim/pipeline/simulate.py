@@ -708,8 +708,9 @@ class Simulate:
             self.geo_file = geo_file
 
         # Change to output directory:
-        os.chdir("Output")
-   
+        #os.chdir("Output")
+        os.chdir("/home/fenu/SimulationGRB/cosi-sim_ff/run1/")
+
         if tra_input == "default":
         
             # Define tra file:
