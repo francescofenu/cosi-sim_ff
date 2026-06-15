@@ -40,7 +40,7 @@ class Simulate:
         self.run_dir = inputs["run_dir"]
         self.geo_file = inputs["geometry_file"]
         self.name = inputs["name"]
-        self.source_file = "/home/fenu/SimulationGRB/cosi-sim_ff/run1/bn110605183_2.source"  #self.name + ".source"
+        self.source_file = "/home/fenu/SimulationGRB/cosi-sim_ff/run1/bn110605183_new.source"  #self.name + ".source"
         self.time = inputs["time"]
         self.src_list = inputs["src_list"]
         self.orientation_file = inputs["orientation_file"]
@@ -162,8 +162,9 @@ class Simulate:
         print()
  
         # Change to output directory:
-        os.chdir("Output")
-   
+        #os.chdir("Output")
+        os.chdir("/home/fenu/SimulationGRB/cosi-sim_ff/run1/")
+
         # Construct executable:
         # Option to run cosima or mcosima with numerous cores.
         if self.mcosima == False:
