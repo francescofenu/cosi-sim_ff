@@ -112,7 +112,8 @@ class Simulate:
         if external_src == False:
            
             # Write source file:
-            f = open(os.path.join("Output",self.source_file),"w")
+            #f = open(os.path.join("Output",self.source_file),"w")
+            f = open(self.source_file,"w")
             f.write("#Source file for data challenge\n")
             f.write("#The detector rotates in the Galactic coordiante system as given in the ori file.\n")
             f.write("#The point sources are fixed in Galactic coordinates.\n\n")
