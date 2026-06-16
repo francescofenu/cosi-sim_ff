@@ -250,8 +250,9 @@ class Simulate:
 
                 if this_line.split()[0] != "TI":
                     g.write(this_line+"\n")
-
+                
                 if this_line.split()[0] == "TI":
+                    print('UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU ',float(this_line.split()[1]),time_constant)
                     new_time = str(float(this_line.split()[1]) + time_constant)
                     g.write("TI %s\n" %new_time)
             
