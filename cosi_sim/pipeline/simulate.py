@@ -38,7 +38,7 @@ class Simulate:
         self.home = self.run_dir
         self.geo_file = inputs["geometry_file"]
         self.name = inputs["name"]
-        self.source_file = "/home/fenu/SimulationGRB/cosi-sim_ff/run1/bn110605183_new.source"  #self.name + ".source"
+        self.source_file = self.run_dir+"bn110605183_new.source" 
         self.time = inputs["time"]
         self.src_list = inputs["src_list"]
         self.orientation_file = inputs["orientation_file"]
@@ -252,7 +252,6 @@ class Simulate:
                     g.write(this_line+"\n")
                 
                 if this_line.split()[0] == "TI":
-                    print('UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU ',float(this_line.split()[1]),time_constant)
                     new_time = str(float(this_line.split()[1]) + time_constant)
                     g.write("TI %s\n" %new_time)
             
